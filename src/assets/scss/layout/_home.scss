@@ -1,0 +1,37 @@
+@import '../helpers/placeholders';
+@import '../helpers/variables';
+@import '../helpers/mixins/clearfix';
+@import '../helpers/mixins/list-reset';
+@import '../helpers/mixins/responsive';
+
+
+
+.home {
+    max-width: 1620px;
+    width: 100%; 
+    height: 780px;
+    box-shadow: 2px 3px 95px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    background-color: $almost-white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: url(../../assets/imgs/square.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+
+    @include media-query(mobile_plus) {
+        height: 980px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include media-query(desktop){
+        flex-direction: row;
+    }
+
+    }
+}

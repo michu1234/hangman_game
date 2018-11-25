@@ -1,0 +1,53 @@
+@import '../helpers/placeholders';
+@import '../helpers/variables';
+@import '../helpers/mixins/clearfix';
+@import '../helpers/mixins/list-reset';
+@import '../helpers/mixins/responsive';
+
+
+#app {
+    min-height: 100%;
+    .modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 128, 0.781);
+        z-index: 444;
+        min-height: calc(100vh + 500px);
+    }
+
+    h2 {
+        font-size: 90px;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-53%, -170%);
+        text-transform: uppercase;
+    }
+
+    button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 25%);  
+        font-family: 'AllerDisplay';
+        width: 350px;
+        height: 110px;
+        color: gold;
+        border: 3px dashed gold;
+        font-size: 20px;
+        background: transparent;
+        font-size: 40px;
+        text-transform: uppercase;
+        border-radius: 50px;
+        
+        &:hover {
+            background: yellow;
+            transition: all .2s;
+            cursor: pointer;
+        }
+    }
+}

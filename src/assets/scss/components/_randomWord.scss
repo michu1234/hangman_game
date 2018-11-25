@@ -1,0 +1,140 @@
+@import '../helpers/placeholders';
+@import '../helpers/variables';
+@import '../helpers/mixins/clearfix';
+@import '../helpers/mixins/list-reset';
+@import '../helpers/mixins/responsive';
+
+.randomWord {
+    min-width: 100%;
+    user-select: none;
+    position: relative;
+    margin-top: -170px;
+
+
+
+    &__letters {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        margin-top: -7px;
+        padding: 2%;
+
+        @include media-query(mobile_plus) {
+            margin-top: 165px;
+        }
+
+        @include media-query(tablet) {
+            padding-right: 74px;
+            padding-left: 74px; 
+        }
+    }
+
+    &__letter--full {
+        width: 30px;
+        height: 34px;
+        display: block;
+        border-radius: 10px;
+        background-color: $hell-dark;
+        opacity: 0.98;
+        color: transparent;
+        font-family: "allerdisplay";
+        font-size: 6px;
+        font-weight: 400;
+        line-height: 140px;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include media-query(tablet_plus) {
+            width: 50px;
+            height: 56px; 
+        }
+
+        @include media-query(desktop) {
+            width: 80px;
+            height: 90px;   
+        }
+
+        @include media-query(screen) {
+            width: 125px;
+            height: 140px;   
+            font-size: 76px;
+        }
+    }
+
+    &__letter--empty {
+        width: 30px;
+        height: 34px;
+        display: block;
+        border-radius: 10px;
+        background-color: $hell-dark;
+        opacity: 0.3;
+
+        @include media-query(tablet_plus) {
+            width: 50px;
+            height: 56px; 
+        }
+
+        @include media-query(desktop) {
+            width: 80px;
+            height: 90px;   
+        }
+
+        @include media-query(screen) {
+            width: 125px;
+            height: 140px;   
+        }
+    }
+
+    &__spinner {
+        text-align: center;
+        transform: translate(-50%, 0);
+        left: 50%;
+        position: absolute;
+        max-width: 100px;
+        filter: grayscale(100%);
+    }
+
+    &__letter--correct {
+        width: 30px;
+        height: 34px;
+        display: block;
+        border-radius: 10px;
+        background-color: $hell-dark;
+        opacity: 0.98;
+        color: $pure-white;
+        font-family: "allerdisplay";
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 34px;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include media-query(tablet_plus) {
+            width: 50px;
+            height: 56px; 
+            font-size: 40px;
+            line-height: 56px;
+        }
+    
+        @include media-query(desktop) {
+            width: 80px;
+            height: 90px;   
+            font-size: 56px;
+            line-height: 90px;
+        }
+    
+        @include media-query(screen) {
+            width: 125px;
+            height: 140px;   
+            font-size: 76px;
+            line-height: 140px;
+        }
+    }
+
+}
+
+
+
+
+
+
